@@ -12,6 +12,7 @@ import cx from 'classnames';
 import s from './Navigation.scss';
 import withStyles from '../../decorators/withStyles';
 import Link from '../Link';
+import FontAwesome from '../FontAwesome';
 
 @withStyles(s)
 class Navigation extends Component {
@@ -23,9 +24,9 @@ class Navigation extends Component {
   render() {
     return (
       <div className={cx(s.root, this.props.className)} role="navigation">
-        <Link className={s.link} to="/about">Next Boat</Link>
-        <Link className={s.link} to="/contact">Schedule</Link>
-        <Link className={s.link} to="/login">Alert</Link>
+        <Link className={s.link} to="/"><FontAwesome name="ship" fixedWidth /> Next Boat</Link>
+        <Link className={s.link} to="/contact"><FontAwesome name="calendar" fixedWidth /> Schedule</Link>
+        <Link className={s.link} to="/login"><FontAwesome name="exclamation-circle" fixedWidth /> Alert</Link>
         <Link className={cx(s.link)} to="/about">About</Link>
       </div>
     );

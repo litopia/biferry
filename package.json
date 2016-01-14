@@ -68,14 +68,16 @@
     "scriptPreprocessor": "../preprocessor.js",
     "unmockedModulePathPatterns": [
       "fbjs",
-      "react"
+      "react",
+      "react-dom"
     ]
   },
   "scripts": {
     "lint": "eslint src tools && jscs src tools",
     "csslint": "csscomb src/components --lint --verbose",
     "csscomb": "csscomb src/components --verbose",
-    "test": "eslint src && jest",
+    "eslint": "eslint src",
+    "test": "jest",
     "clean": "babel-node tools/run clean",
     "copy": "babel-node tools/run copy",
     "bundle": "babel-node tools/run bundle",
